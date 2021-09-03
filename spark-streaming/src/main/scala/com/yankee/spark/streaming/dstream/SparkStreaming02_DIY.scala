@@ -31,7 +31,7 @@ object SparkStreaming02_DIY {
 
   /**
    * 自定义数据采集器
-   *  1.继承Receiver，定义泛型
+   *  1.继承Receiver，定义泛型，传递参数
    *  2.重写两个方法：onStart、onStop
    */
   class MyReceiver extends Receiver[String](StorageLevel.MEMORY_ONLY) {
