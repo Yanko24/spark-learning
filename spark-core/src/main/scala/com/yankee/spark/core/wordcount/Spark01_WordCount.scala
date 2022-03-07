@@ -15,7 +15,7 @@ object Spark01_WordCount {
 
     // TODO 执行业务操作
     // 1.读取文件，获取一行一行的数据
-    val lines: RDD[String] = sc.textFile("datas")
+    val lines: RDD[String] = sc.textFile("data/words.txt")
     // 2.将一行数据拆分成一个一个的单词（分词）
     val words: RDD[String] = lines.flatMap(_.split(" "))
     // 3.将数据根据单词进行分组，便于统计
